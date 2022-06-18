@@ -4,7 +4,7 @@ const { kursaro } = require('../utilajxoj/kursaro');
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName('montru-kursojn')
+    .setName('kursoj')
     .setDescription('Montru al vi liston de esperantaj kursoj'),
 
   async execute(interaction) {
