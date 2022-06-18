@@ -13,15 +13,18 @@ module.exports = {
   async execute(interaction) {
     const cxiKanalo = interaction.channel;
     const eblo = interaction.options;
+
+    // Obtenu la kvanton da mesaĝoj forigotaj
     const kvanto = eblo.getInteger('kvanto');
 
-    if (kvanto <= 1 || kvanto > 100) {
+    if (kvanto < 1 || kvanto > 100) {
       return interaction.reply({
         content: 'Oni bezonas enmeti nombron inter 1 kaj 99',
         ephemeral: true,
       });
     }
 
+    // Forigu la mesaĝojn
     await cxiKanalo
       .bulkDelete(kvanto, true)
       .catch((eraro) => {
@@ -32,6 +35,7 @@ module.exports = {
         });
       });
 
+    // Sendu la mesaĝon
     return interaction.reply({
       content: `${kvanto} mesaĝoj sukcese forigitaj`,
       ephemeral: true,

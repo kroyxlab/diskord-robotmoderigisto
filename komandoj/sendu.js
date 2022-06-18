@@ -20,11 +20,12 @@ module.exports = {
     const teksto = eblo.getString('teksto');
     const eldonajxo = eblo.getAttachment('eldonajxo');
 
-    // Se la ebloj estis enmetataj, sendu ilin
+    // Se la ebloj estis enmetataj, sendu ilin al la kanalo
     if (teksto !== null) cxiKanalo.send(teksto);
     if (eldonajxo !== null) cxiKanalo.send(eldonajxo.url);
 
-    interaction.reply('_');
+    // sendu kaj forigu mesaĝon
+    interaction.reply('...');
     interaction.deleteReply();
   },
 };

@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
+// Agordu la klienton
 const kliento = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
 kliento.commands = new Collection();

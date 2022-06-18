@@ -19,10 +19,13 @@ module.exports = {
   async execute(interaction) {
     const kanalo = interaction.channel;
     const eblo = interaction.options;
+
+    // Obtenu la datumojn enmetitajn
     const titolo = eblo.getString('titolo');
     const enhavo = eblo.getString('enhavo');
     const attachment = eblo.getAttachment('attachment');
 
+    // Kreu la fadenon
     kanalo.threads.create({
       name: titolo,
       autoArchiveDuration: 60,
@@ -32,15 +35,10 @@ module.exports = {
       thread.send(enhavo);
     });
 
-    interaction.reply({
+    // Sendu la mesaĝon
+    return interaction.reply({
       content: 'La fadeno estis kreata',
       ephemeral: true,
     });
-    // const msj = interaction.reply('hola');
-    // msj.startThread({
-    //  name: 'Holaaaa',
-    //  autoArchiveDuration: 60,
-    //  type: 'GUILD_PUBLIC_THREAD'
-    // })
   },
 };
