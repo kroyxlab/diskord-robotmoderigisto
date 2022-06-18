@@ -4,7 +4,7 @@ const { PermissionFlagsBits } = require('discord-api-types/v10');
 module.exports = {
   data: new SlashCommandBuilder()
     .setDefaultMemberPermissions(PermissionFlagsBits.ManageChannels)
-    .setName('forigu')
+    .setName('forigu-mesaĝojn')
     .setDescription('Forigi ĝis 99 mesaĝojn po fojo')
     .addIntegerOption((eblo) => eblo
       .setName('kvanto')

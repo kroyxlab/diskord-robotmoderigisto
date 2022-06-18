@@ -2,6 +2,7 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 
 module.exports = {
   data: new SlashCommandBuilder()
+    .setDefaultMemberPermissions(PermissionFlagsBits.ManageChannels)
     .setName('kreu-fadenon')
     .setDescription('Kreu aktivaĵojn')
     .addStringOption((eblo) => eblo
