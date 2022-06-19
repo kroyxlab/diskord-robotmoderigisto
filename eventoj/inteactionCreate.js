@@ -19,5 +19,11 @@ module.exports = {
         }
       }
     }
+
+    if(interaction.isModalSubmit()) {
+      console.log(`${interaction.user.tag} en #${interaction.channel.name} ekagigis la modalon ${interaction.customId}`);
+      const { execute } = require(`../modalo/${interaction.customId}`);
+      execute(interaction);
+    }
   },
 };
