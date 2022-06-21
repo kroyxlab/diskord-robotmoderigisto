@@ -30,7 +30,7 @@ module.exports = {
     // Kreu la fadenon
     kanalo.threads.create({
       name: titolo,
-      autoArchiveDuration: 60,
+      autoArchiveDuration: 60 * 24,
       type: 'GUILD_PUBLIC_THREAD',
     }).then((thread) => {
       if (attachment !== null) thread.send(attachment.url);
