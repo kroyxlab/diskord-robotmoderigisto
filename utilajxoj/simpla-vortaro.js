@@ -20,7 +20,7 @@ exports.traduku = async (vorto) => {
     .then(({ difinoj }) => difinoj
       .map(({ tradukoj }) => tradukoj
         .map(({ lingvo, traduko }) => ({ lingvo, traduko }))))
-    .then((tradukaro) => tradukaro[0].sort())
+    .then((tradukoj) => tradukoj[0].sort())
     .catch(() => 'eraro');
 
   return sercxo;

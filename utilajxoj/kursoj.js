@@ -1,5 +1,5 @@
 module.exports = {
-  kursaro: [
+  kursoj: [
     { nomo: 'Duolingo', url: 'https://en.duolingo.com/course/eo/es/Learn-Esperanto' },
     { nomo: 'Lernu', url: 'https://lernu.net/kurso/nakamura' },
     { nomo: 'Pasporto al la tuta mondo', url: 'https://www.youtube.com/user/pasportotutamondo/videos' },

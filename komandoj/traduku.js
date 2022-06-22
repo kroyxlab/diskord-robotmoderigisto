@@ -36,7 +36,7 @@ module.exports = {
     }
 
     // Ricevu la rezulton de la serĉo
-    const tradukaro = sercxo.map((traduko) => ({
+    const tradukoj = sercxo.map((traduko) => ({
       name: traduko.lingvo,
       value: traduko.traduko,
       inline: true,
@@ -47,7 +47,7 @@ module.exports = {
       .setColor('#42b983')
       .setTitle(vorto.toUpperCase())
       .setURL(`http://www.simplavortaro.org/vorto/${vorto}`)
-      .addFields(tradukaro);
+      .addFields(tradukoj);
 
     const butono = new MessageActionRow().addComponents(
       new MessageButton()

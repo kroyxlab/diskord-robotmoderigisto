@@ -36,7 +36,7 @@ module.exports = {
 
     // Ricevu la rezulton de la serĉo
     let vortfarado = sercxo.rezulto;
-    let partaro = sercxo.partoj.map((parto) => {
+    let partoj = sercxo.partoj.map((parto) => {
       return {
         name: parto,
         value: `[http://www.simplavortaro.org/vorto/${parto}](http:www.simplavortaro.org/vorto/${parto})`,
@@ -49,7 +49,7 @@ module.exports = {
       .setColor('#42b983')
       .setTitle(vorto.toUpperCase())
       .setDescription(vortfarado)
-      .addFields(partaro);
+      .addFields(partoj);
 
     const butono = new MessageActionRow()
       .addComponents(

@@ -9,7 +9,7 @@ module.exports = {
   async execute(interaction) {
 
     // kreu liston de komandoj
-    const komandaro = [
+    const komandoj = [
       {
         name: '/difinu',
         value: 'Montras al vi la difinon de la vorto',
@@ -37,7 +37,7 @@ module.exports = {
       .setColor('#42b983')
       .setTitle('Helpo')
       .setURL('https://github.com/kroyxlab/diskord-robotmoderigisto')
-      .addFields(komandaro);
+      .addFields(komandoj);
 
     // Sendu la respondon
     return interaction.reply({
