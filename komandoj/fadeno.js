@@ -14,7 +14,7 @@ module.exports = {
       .setName('enhavo')
       .setDescription('La unua mesaĝo en la fadeno')
       .setRequired(true))
-    .addStringOption((eblo) = eblo
+    .addStringOption((eblo) => eblo
       .setName('ligilo')
       .setDescription('Aldonu ligilon'))
     .addAttachmentOption((eblo) => eblo
