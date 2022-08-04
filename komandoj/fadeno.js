@@ -14,6 +14,9 @@ module.exports = {
       .setName('enhavo')
       .setDescription('La unua mesaĝo en la fadeno')
       .setRequired(true))
+    .addStringOption((eblo) = eblo
+      .setName('ligilo')
+      .setDescription('Aldonu ligilon'))
     .addAttachmentOption((eblo) => eblo
       .setName('attachment')
       .setDescription('Elektu la bildon por montri en la fadeno')),
@@ -25,6 +28,7 @@ module.exports = {
     // Obtenu la datumojn enmetitajn
     const titolo = eblo.getString('titolo');
     const enhavo = eblo.getString('enhavo');
+    const ligilo = eblo.getString('ligilo');
     const attachment = eblo.getAttachment('attachment');
 
     // Kreu la fadenon
@@ -34,6 +38,7 @@ module.exports = {
       type: 'GUILD_PUBLIC_THREAD',
     }).then((thread) => {
       if (attachment !== null) thread.send(attachment.url);
+      if (ligilo !== null) thread.send(ligilo);
       thread.send(enhavo);
     });
 
